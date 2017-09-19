@@ -16,7 +16,7 @@
 
 ```
 #Description - What is this?
-This repository contains my personal dotfiles for a bunch of GNU/Linux applications.
+This repository contains my personal dotfiles for a bunch of GNU/Linux applications..
 
 > "Dotfiles" are text configuration files on Unix-like systems for
 > things like our shell, `~/.zshrc`, our editor in `~/.vimrc`, and many
