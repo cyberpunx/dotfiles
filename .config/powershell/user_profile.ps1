@@ -35,3 +35,12 @@ function which ($command) {
   Get-Command -Name $command -ErrorAction SilentlyContinue |
     Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
+
+# Create custom "bin" direrctory if not exists
+$DocumentsPath = [Environment]::GetFolderPath("MyDocuments")
+$InstallLocation = $DocumentsPath + "\Powershell\custom_bin"
+$envPaths = $env:Path -split ';'
+if ($envPaths -notcontains $InstallLocation) {
+    $envPaths = $envPaths + $InstallLocation | where { $_ }
+    $env:Path = $envPaths -join ';'
+}
